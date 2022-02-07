@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="alert-box" id="alert">
+    Alert 박스
+    <button onclick="closeBtn()">닫기</button>
+  </div>
+  <button onclick="알림창열기()">버튼</button>
+  
+  <!-- <h2 id="hello">안녕하세요!</h2> -->
+
+  <script>
+    // document.getElementById('hello').innerHTML = '안녕';
+    // document.getElementById('hello').style.fontSize = '30px';
+    
+    // function(펑션) 문법
+    // 변경할 HTML이 있으면 그거 하단에 JS 코딩해야함
+    function 알림창열기() {
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    function closeBtn() {
+      document.getElementById('alert').style.display = 'none'
+    }
+
+  </script>
+</body>
+</html>
