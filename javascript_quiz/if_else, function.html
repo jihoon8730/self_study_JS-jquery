@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// (여기서의 369게임은 '3의 배수에서' 박수를 치면 게임입니다)
+
+// 철수는 이 숫자가 3의 배수인지 아닌지 파악하기 넘나 힘든 관계로
+
+// 프로그래밍으로 이 문제를 해결하려고 합니다. 
+
+// 어떤 숫자를 함수 안에 집어넣으면 박수를 쳐야할 지 말아야할 지 판단해주는 함수를 만들려고 하는데
+
+// 어떻게 함수를 만들어야할까요?
+
+// (힌트 : 자바스크립트엔 % 라는 연산자가 있습니다. 용도는 안알랴줌)
+
+    function 삼육구게임(num) {
+    if (num % 9 === 0) {
+      console.log('박수x2')
+    } else if (num % 3 === 0) {
+      console.log('박수')
+    } else {
+      console.log('통과')
+    }
+    // 만약에 6이라는 숫자를 입력하면 박수라는 문자열이 출력
+    // 11이라고 숫자를 입력하면 통과라는 문자열이 출력
+    // 18이라고 숫자를 입력하면 박수x2 라는 문자열이 출력
+}
+  </script>
+</body>
+</html>

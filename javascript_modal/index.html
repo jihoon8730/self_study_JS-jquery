@@ -16,6 +16,25 @@
     crossorigin="anonymous"></script>
   </head>
   <body>
+
+    <div class="left-menu">
+      <p>Menu Title</p>
+    </div>
+
+    <!-- <h3 id="hi">안녕</h3> -->
+    <script>
+      // javascript로 애니메이션 주는법 !!!
+      //$('#hi').click(function(){
+        // $('#hi').animate({ marginTop : '100px' }, 5000);
+        // javascript는 -(대쉬)로 표현할 수 없음 css랑 다름
+        // 그래서 글자두개를 붙일 때 대문자를 사용해서 붙임
+        // camelCase 이름하야
+        // });
+
+    </script>
+
+
+
     <!-- modal창은 맨 위에 오는게 보통 적절한 위치 -->
     <div id="modal-page" class="black-background">
       <div  class="white-background">
@@ -55,11 +74,21 @@
       <hr class="my-4">
       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       <a id="modal-btn" class="btn btn-primary btn-lg" href="#" role="button">Log in</a>
+      <a id="show-menu" class="btn btn-danger btn-lg" href="#" role="button">Show Menu</a>
     </div>
 
+    <!-- Show Menu btn -->
+    <script>
+      $('#show-menu').click(function(){
+        $('.left-menu').animate({ marginLeft : '0px' }, 1000);
+      });
+    </script>
 
     <script>
       // modal기능
+
+      var 이메일안내창 =  $('#email-alert');
+
       $('form').on('submit',function(e){
         // 만약에 이메일 input에 입력된 값이 빈칸인 경우,
         // 폼의 전송을 막음, 안내문 띄움
@@ -67,7 +96,7 @@
         // 폼의 전송을 막음, 안내문 띄움
         if ($('#test-email').val() === '') {
           e.preventDefault();
-          $('#email-alert').show();
+          이메일안내창.show();
           alert('입력 좀 해라 쪽팔리게잇!!')
         } else if ($('#test-pwd').val() === ''){
           e.preventDefault();
@@ -76,16 +105,18 @@
       });
 
       // 이벤트 change, input
-      $('#test-email').on('change', function(){
-        $('#email-alert').show();
-      });
+      // $('#test-email').on('change', function(){
+      //   $('#email-alert').show();
+      // });
       // 
 
-      $('#modal-btn').on('click',function(){
-         // 만약에 저기 input에 입력된 값이 '안녕' 일때만
-        $('#modal-page').fadeIn();
+      // Log in 여는 창
+      // 요즘 애니메이션 만드는 방법 !!
+      $('#modal-btn').click(function(){
+        $('#modal-page').addClass('slide-down');
       });
 
+      // Log in 닫는 창
       $('#close-btn').click(function(){
         $('#modal-page').fadeOut();
       });
@@ -110,6 +141,13 @@
       } else {
         console.log('반가워')
       }
+
+      // 변수 !!!
+      // 변수를 만들겠다 (선언)
+      // 값을 집어넣는다 (할당)
+      // 재선언이 불가능한 변수를 만들 때 let, const 변수 사용
+      // const는 재할당(값변경)도 불가능
+      
 
       // 코드 잘짜는 법!!
       // 한국어로 설명부터 하자

@@ -11,7 +11,13 @@
   z-index: 5;
   width: 100%;
   height: 100%;
-  display: none;
+  display: block;
+  transition: all 1s;
+  transform: translateY(-1000px);
+}
+
+.slide-down {
+  transform: translateY(0px);
 }
 
 .white-background {
@@ -39,4 +45,13 @@
 
 #pwd-alert {
   display: none;
+}
+
+.left-menu {
+  width: 150px;
+  height: 100%;
+  background: black;
+  color: white;
+  position: fixed;
+  margin-left: -150px;
 }
