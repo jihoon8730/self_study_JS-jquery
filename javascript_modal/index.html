@@ -56,7 +56,7 @@
     </div>
 
     <div class="nav-menu">
-      <h4 style="margin: 0">Shirts Studio</h4>
+      <h4 style="margin:0" class="large-logo">Shirts Studio</h4>
       <a id="nav-sub-button" style="cursor: pointer;">Products</a>
     </div>
 
@@ -67,6 +67,21 @@
       <li class="list-group-item">Shoes</li>
       <li class="list-group-item">Acc</li>
     </ul>
+    <!-- 스크롤바 내리면 메뉴가 단색으로 변함 -->
+    <script>
+      // 스크롤바를 내리면 
+      // .nav-menu background : white;
+      $(window).on('scroll',function() {
+        let scrollBar = $(window).scrollTop();
+        if (scrollBar > 100 ) {
+          $('.nav-menu').addClass('nav-black');
+          $('.nav-menu h4').addClass('small-logo');
+        } else {
+          $('.nav-menu').removeClass('nav-black');
+          $('.nav-menu h4').removeClass('small-logo');
+        }
+      });
+    </script>
 
     <div class="jumbotron main-background">
       <h1 class="display-4">Shirts Studio</h1>
@@ -242,7 +257,28 @@
       // 코드 잘짜는 법!!
       // 한국어로 설명부터 하자
     </script>
+
+
+    <!-- 탭기능 -->
+    <div class="container mt-5">
+      <ul class="list">
+        <li class="tab-button">Products</li>
+        <li class="tab-button active">Information</li>
+        <li class="tab-button">Shipping</li>
+      </ul>
+
+      <div class="tab-content">
+        <p>상품설명입니다. Product</p>
+      </div>
+      <div class="tab-content show">
+        <p>상품정보입니다. Info</p>
+      </div>
+      <div class="tab-content">
+        <p>배송정보입니다. Shipping</p>
+      </div>
+    </div>
     
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
   </body>
 </html>
