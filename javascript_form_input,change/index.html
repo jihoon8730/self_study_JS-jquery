@@ -32,21 +32,31 @@
     </form>
 
     <script>
+      let 사이즈 = [26,28,30,32,34,36];
 
       $('#option1').on('change', function () {
-          if ($('#option1').val() === '셔츠') {
+          if ($('#option1').val() == '바지') {
             $('#option2').html('');
-            var 템플릿 = `<option>95</option>
-                        <option>100</option>
-                        <option>105</option>`;
-            $('#option2').append(템플릿);
-          } else if ($('#option1').val() === '바지') {
-            $('#option2').html('');
-            var 템플릿 = `<option>28</option>
-                      <option>30</option>
-                      <option>32</option>`;
-            $('#option2').append(템플릿);
+            // forEach 신문법 2월15일
+            사이즈.forEach(function(i){
+              // 6번 반복해줌
+              // i 값은 사이즈 안에있는 하나하나의 데이터
+              let 템플릿 = `<option>${i}</option>`;
+              $('#option2').append(템플릿);
+            });
+              
           }
+
+          // 셔츠
+          // if ($('#option1').val() === '셔츠') {
+          //   $('#option2').html('');
+          //   var 템플릿 = `<option>95</option>
+          //               <option>100</option>
+          //               <option>105</option>`;
+          //   $('#option2').append(템플릿);
+          // } 
+
+
           // 만약에 사용자가 입력한값이 '바지'면
           // 바지용 option 템플릿을 만들어서
           // 원하는곳에 append(템플릿);
