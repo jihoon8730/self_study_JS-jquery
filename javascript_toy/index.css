@@ -1,0 +1,41 @@
+.wrap {
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0.5px 2px 4px gray;
+}
+.navbar .navbar-logo {
+  padding-left: 10px;
+  color: #8ea5e9;
+}
+.navbar span {
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.navbar-signUp {
+  margin-right: 10px;
+}
+.navbar-signUp span {
+  font-size: 14px;
+  padding: 7px;
+  background-color: royalblue;
+  border-radius: 5px;
+  color: #eeeeee;
+}
+
+.input {
+  margin: 50px 0px 50px 0px;
+}
+
+.section h4 {
+  color: #f6f6f6;
+}
+.section .card {
+  float: left;
+}/*# sourceMappingURL=index.css.map */

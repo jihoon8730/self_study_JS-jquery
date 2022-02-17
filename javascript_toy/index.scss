@@ -1,0 +1,46 @@
+.wrap {
+  width: 90%;
+  margin: auto;
+}
+
+// 상단 메뉴(navbar) 부분
+.navbar {
+  width: 100%;
+  background-color: rgb(248, 248, 248);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0.5px 2px 4px gray;
+  .navbar-logo {
+    padding-left: 10px;
+    color: rgb(142, 165, 233);
+  }
+  span {
+    font-size: 20px;
+    padding-left: 5px;
+  }
+}
+
+.navbar-signUp {
+  margin-right: 10px;
+  span {
+    font-size: 14px;
+    padding: 7px;
+    background-color: royalblue;
+    border-radius: 5px;
+    color: #eeeeee;
+  }
+}
+
+// 검색 창(input) 부분
+.input {
+  margin: 50px 0px 50px 0px;
+}
+
+// 상품메뉴(section) 부분
+.section {
+  h4 {
+    color: #f6f6f6;
+  }
+  .card {
+    float: left;
+  }
+}
