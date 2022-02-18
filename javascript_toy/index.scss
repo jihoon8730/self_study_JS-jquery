@@ -1,3 +1,7 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .wrap {
   width: 90%;
   margin: auto;
@@ -40,7 +44,40 @@
   h4 {
     color: #f6f6f6;
   }
-  .card {
+  .card-group {
+    width: 70%;
     float: left;
+  }
+  .card {
+    margin: 0px 20px 20px 0px;
+  }
+  .list-group-item {
+    background-color: rgb(224, 224, 224);
+  }
+  .card-title {
+    padding: 10px;
+  }
+  .card-text {
+    padding: 10px;
+  }
+}
+
+// 장바구니(aside) 부분
+.aside {
+  width: 30%;
+  float: right;
+  .card-img-top {
+    margin: 20px auto 0px auto;
+    width: 90%;
+    height: 170px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 5px;
+    text-align: center;
+    color: #eeeeee;
+    line-height: 150px;
+    font-size: 14px;
+  }
+  .card-text {
+    text-align: end;
   }
 }

@@ -1,3 +1,7 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .wrap {
   width: 90%;
   margin: auto;
@@ -36,6 +40,38 @@
 .section h4 {
   color: #f6f6f6;
 }
-.section .card {
+.section .card-group {
+  width: 70%;
   float: left;
+}
+.section .card {
+  margin: 0px 20px 20px 0px;
+}
+.section .list-group-item {
+  background-color: #e0e0e0;
+}
+.section .card-title {
+  padding: 10px;
+}
+.section .card-text {
+  padding: 10px;
+}
+
+.aside {
+  width: 30%;
+  float: right;
+}
+.aside .card-img-top {
+  margin: 20px auto 0px auto;
+  width: 90%;
+  height: 170px;
+  background-color: #4b4b4b;
+  border-radius: 5px;
+  text-align: center;
+  color: #eeeeee;
+  line-height: 150px;
+  font-size: 14px;
+}
+.aside .card-text {
+  text-align: end;
 }/*# sourceMappingURL=index.css.map */
