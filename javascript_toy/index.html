@@ -1,21 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
-  </head>
-  <body style="background-color: rgb(175, 195, 255);">
-    <!-- 전체 div -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>Hello, world!</title>
+</head>
+
+<body style="background-color: rgb(175, 195, 255);">
+  <!-- 전체 div -->
   <div class="wrap">
     <!-- 최상단 로고 메뉴(navbar) 부분 -->
     <div class="navbar">
@@ -26,11 +30,11 @@
       <div class="navbar-signUp">
         <span>로그인</span>
         <span>회원가입</span>
-      </div>  
+      </div>
     </div>
     <!-- 검색창(input) 부분 -->
     <div class="input">
-      <input type="text" class="form-control" placeholder="검색어를 입력해주세요." aria-label="Username"
+      <input id="input-search" type="text" class="form-control" placeholder="검색어를 입력해주세요." aria-label="Username"
         aria-describedby="addon-wrapping">
     </div>
     <!-- 상품 메뉴(section) 부분 -->
@@ -50,31 +54,31 @@
         <div class="card">
           <img src="img/pr2.JPG" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">원목 침대 프레임</h5>
-            <p class="card-text">침대나라</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">200000</small>
+            <small class="text-muted"></small>
           </div>
         </div>
         <div class="card">
           <img src="img/pr3.JPG" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">천연 디퓨저 세트</h5>
-            <p class="card-text">향기나라</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">300000</small>
+            <small class="text-muted"></small>
           </div>
         </div>
         <div class="card">
           <img src="img/pr4.JPG" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">시원한 서큘레이터</h5>
-            <p class="card-text">바람나라</p>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">400000</small>
+            <small class="text-muted"></small>
           </div>
         </div>
       </div>
@@ -100,17 +104,40 @@
     $.ajax({
       url: 'store.json',
       type: 'GET'
-    }).done(function(deta){
+    }).done(function (deta) {
       console.log(deta);
       $('.card-title').eq(0).html(deta.products[0].product_name);
       $('.card-text').eq(0).html(deta.products[0].brand_name);
       $('.text-muted').eq(0).html(deta.products[0].price);
+
+      $('.card-title').eq(1).html(deta.products[1].product_name);
+      $('.card-text').eq(1).html(deta.products[1].brand_name);
+      $('.text-muted').eq(1).html(deta.products[1].price);
+
+      $('.card-title').eq(2).html(deta.products[2].product_name);
+      $('.card-text').eq(2).html(deta.products[2].brand_name);
+      $('.text-muted').eq(2).html(deta.products[2].price);
+
+      $('.card-title').eq(3).html(deta.products[3].product_name);
+      $('.card-text').eq(3).html(deta.products[3].brand_name);
+      $('.text-muted').eq(3).html(deta.products[3].price);
     })
+
+    // 1. input창에 상품명을 (예를들어 식기세척기라고 검색하면) 그 글자를
+    // 가지고있는 card의 상품을 보여줌
+    // 
+    let aaa = '식기세척기'
+    $("#input-search").val(aaa.indexOf('식'))
+    console.log()
+
   </script>
 
-  
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
