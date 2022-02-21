@@ -34,7 +34,7 @@
     </div>
     <!-- 검색창(input) 부분 -->
     <div class="input">
-      <input id="input-search" type="text" class="form-control" placeholder="검색어를 입력해주세요." aria-label="Username"
+      <input onkeyup="filter()" id="input-search" type="text" class="form-control" placeholder="검색어를 입력해주세요." aria-label="Username"
         aria-describedby="addon-wrapping">
     </div>
     <!-- 상품 메뉴(section) 부분 -->
@@ -98,6 +98,8 @@
   </div>
 
   <script>
+    //2월 19일 질문
+
     // 1. ajax에 있는 json 데이터 불러오기!
     // 2. 데이터 불러오는것 성공하면 
     // 3. 불러온 데이터로 card에 들어있는 상품 제목, 브랜드, 가격 바꿔주기 
@@ -125,11 +127,26 @@
 
     // 1. input창에 상품명을 (예를들어 식기세척기라고 검색하면) 그 글자를
     // 가지고있는 card의 상품을 보여줌
-    // 
-    let aaa = '식기세척기'
-    $("#input-search").val(aaa.indexOf('식'))
-    console.log()
-
+  </script>
+  <script>
+    function filter() {
+      let value = $('#input-search').val();
+      let item = $('.card');
+      let name 
+      console.log(value);
+      for(i = 0; i < item.length; i++) {
+        name = item[i].getElementsByClassName('card-title');
+        console.log(name[0].innerHTML);
+        // 만약  value라는 문자가 name에 있는지 검사해서
+        // 있으면 카드를 display:block,
+        // 없으면 display:none 해라
+        if (name[0].innerHTML.indexOf(value) > -1) {
+          item[i].style.display = 'block';
+        } else {
+          item[i].style.display = 'none';
+        }
+      }
+    }
   </script>
 
 
